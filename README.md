@@ -11,7 +11,7 @@ honeypot technologies, including [Snort](https://snort.org/),
 
 For questions regarding troubleshooting your installation, please review the
 [MHN Troubleshooting
-Guide](https://github.com/threatstream/mhn/wiki/MHN-Troubleshooting-Guide),
+Guide](https://github.com/pwnlandia/mhn/wiki/MHN-Troubleshooting-Guide),
 search past questions on the [modern-honey-network Google
 Group](https://groups.google.com/forum/#!forum/modern-honey-network), or send
 emails to <modern-honey-network@googlegroups.com>.
@@ -35,7 +35,7 @@ It also allows system administrators to:
 - The MHN server is supported on Ubuntu 18.04, Ubuntu 16.04, and Centos 6.9.  
 - Other versions of Linux may work but are generally not tested or supported.
 
-Note: if you run into trouble during the install, please checkout the [troubleshooting guide](https://github.com/threatstream/MHN/wiki/MHN-Troubleshooting-Guide) on the wiki.  If you only want to experiment with MHN on some virtual machines, please check out the [Getting up and Running with Vagrant](https://github.com/threatstream/mhn/wiki/Getting-up-and-running-using-Vagrant) guide on the wiki.
+Note: if you run into trouble during the install, please checkout the [troubleshooting guide](https://github.com/Pwnlandia/MHN/wiki/MHN-Troubleshooting-Guide) on the wiki.  If you only want to experiment with MHN on some virtual machines, please check out the [Getting up and Running with Vagrant](https://github.com/Pwnlandia/mhn/wiki/Getting-up-and-running-using-Vagrant) guide on the wiki.
 
 Install Git
 
@@ -45,7 +45,7 @@ Install Git
 Install MHN
     
     $ cd /opt/
-    $ sudo git clone https://github.com/threatstream/mhn.git
+    $ sudo git clone https://github.com/pwnlandia/mhn.git
     $ cd mhn/
 
 Run the following script to complete the installation.  While this script runs,
@@ -97,12 +97,12 @@ services running on your MHN server.  See below for checking these.
 ### Running MHN Behind a Proxy
 
 For directions on running MHN behind a web proxy, follow the directions in the
-[wiki.](https://github.com/threatstream/mhn/wiki/Running-MHN-Behind-a-Web-Proxy)
+[wiki.](https://github.com/pwnlandia/mhn/wiki/Running-MHN-Behind-a-Web-Proxy)
 
 ### Running MHN Over HTTPS
 
 By default MHN will run without HTTPS, to configure your installation to use SSL
-certificates directions can be found in the [wiki.](https://github.com/threatstream/mhn/wiki/Running-MHN-Over-HTTPS)
+certificates directions can be found in the [wiki.](https://github.com/pwnlandia/mhn/wiki/Running-MHN-Over-HTTPS)
 
 ### Running MHN with Docker
 
@@ -153,7 +153,7 @@ steps for deploying a honeypot with MHN:
 5. Login to a honeypot server and run this command as root.
 
 If the deploy script successfully completes you should see the new sensor listed
-under your deployed sensor list. For a full list of supported sensors, check the list here: [List of Supported Sensors](https://github.com/threatstream/mhn/wiki/List-of-Supported-Sensors)
+under your deployed sensor list. For a full list of supported sensors, check the list here: [List of Supported Sensors](https://github.com/pwnlandia/mhn/wiki/List-of-Supported-Sensors)
 
 ## Integration with Splunk and ArcSight
 
@@ -176,32 +176,31 @@ log should be monitored by the SplunkUniversalForwarder.
 
 This will log the events as CEF to /var/log/mhn-arcsight.log
 
+## Data	
+*NOTICE* **This section is out of date. Community data is not collected by Anomali although MHN still attempts to send this data to Anomali servers.**	
 
-## Data
-
-The MHN server reports anonymized attack data back to Anomali, Inc. (formerly
-known as ThreatStream). If you are interested in viewing this data, get details
-in the
-[wiki](https://github.com/threatstream/mhn/wiki/Getting-Access-to-the-MHN-Community-Data).
-This data reporting can be disabled by running the following command from the
-MHN server after completing the initial installation steps outlined above:
-`/opt/mhn/scripts/disable_collector.sh`
+The MHN server reports anonymized attack data back to Anomali, Inc. (formerly	
+known as ThreatStream). If you are interested in viewing this data, get details	
+in the	
+[wiki](https://github.com/Pwnlandia/mhn/wiki/Getting-Access-to-the-MHN-Community-Data).	
+This data reporting can be disabled by running the following command from the	
+MHN server after completing the initial installation steps outlined above:	
+`/opt/mhn/scripts/disable_collector.sh`	
 
 
 ## Support or Contact
-MHN is an open source project brought to you by the passionate folks at Anomali,
-Inc. Please check out our troubleshooting guide on the wiki. We will also lend a
+MHN is an open source project that relies on community involvement. Please check out our troubleshooting guide on the wiki. We will also lend a
 hand, if needed. Find us at: <modern-honey-network@googlegroups.com>.
 
 ### Credit and Thanks
+MHN was originally created by Anomali, Inc.
+
 MHN leverages and extends upon several awesome projects by the Honeynet project.
 Please show them your support by way of donation.
 
 ## LICENSE
 
 Modern Honeypot Network
-
-Copyright (C) 2019 - Anomali, Inc.
 
 This program free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public
